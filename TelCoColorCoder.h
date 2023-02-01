@@ -1,5 +1,5 @@
-#include<bits/stdc++.h>
-using namespace std;
+#ifndef TELCOCOLORCODER_H
+#define TELCOCOLORCODER_H
 
 namespace TelCoColorCoder {
     enum MajorColor { WHITE, RED, BLACK, YELLOW, VIOLET };
@@ -18,9 +18,11 @@ namespace TelCoColorCoder {
             ColorPair(MajorColor major, MinorColor minor);
             MajorColor getMajor();
             MinorColor getMinor();
-            string ToString();
+            std::string ToString();
     };
 
     ColorPair GetColorFromPairNumber(int pairNumber);
     int GetPairNumberFromColor(MajorColor major, MinorColor minor);
 }
+
+#endif
