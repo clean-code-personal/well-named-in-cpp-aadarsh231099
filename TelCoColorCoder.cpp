@@ -5,13 +5,12 @@
 const char* TelCoColorCoder::MajorColorNames[] = {
     "White", "Red", "Black", "Yellow", "Violet"
 };
-int TelCoColorCoder::numberOfMajorColors =
-    sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
+int TelCoColorCoder::numberOfMajorColors = 5;
+
 const char* TelCoColorCoder::MinorColorNames[] = {
     "Blue", "Orange", "Green", "Brown", "Slate"
 };
-int TelCoColorCoder::numberOfMinorColors =
-    sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
+int TelCoColorCoder::numberOfMinorColors = 5;
 
 TelCoColorCoder::ColorPair::ColorPair(MajorColor major, MinorColor minor) :
     majorColor(major), minorColor(minor)
