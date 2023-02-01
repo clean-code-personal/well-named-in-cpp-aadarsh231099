@@ -1,17 +1,4 @@
 #include "TelCoColorCoder.h"
-#include <string>
-
-TelCoColorCoder::ColorPair::ColorPair(MajorColor major, MinorColor minor) :
-    majorColor(major), minorColor(minor)
-{}
-
-TelCoColorCoder::MajorColor TelCoColorCoder::ColorPair::getMajor() {
-    return majorColor;
-}
-
-TelCoColorCoder::MinorColor TelCoColorCoder::ColorPair::getMinor() {
-    return minorColor;
-}
 
 std::string TelCoColorCoder::ColorPair::ToString() {
     std::string colorPairStr = MajorColorNames[majorColor];
@@ -22,7 +9,7 @@ std::string TelCoColorCoder::ColorPair::ToString() {
 
 TelCoColorCoder::ColorPair TelCoColorCoder::GetColorFromPairNumber(int pairNumber) {
     int zeroBasedPairNumber = pairNumber - 1;
-    MajorColor majorColor = 
+    MajorColor majorColor =
         (MajorColor)(zeroBasedPairNumber / numberOfMinorColors);
     MinorColor minorColor =
         (MinorColor)(zeroBasedPairNumber % numberOfMinorColors);
