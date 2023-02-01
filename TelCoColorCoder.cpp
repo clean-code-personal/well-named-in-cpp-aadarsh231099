@@ -2,28 +2,6 @@
 #include <assert.h>
 #include "TelCoColorCoder.h"
 
-const char* TelCoColorCoder::MajorColorNames[5] = {
-    "White", "Red", "Black", "Yellow", "Violet"
-};
-int TelCoColorCoder::numberOfMajorColors = 5;
-
-const char* TelCoColorCoder::MinorColorNames[5] = {
-    "Blue", "Orange", "Green", "Brown", "Slate"
-};
-int TelCoColorCoder::numberOfMinorColors = 5;
-
-TelCoColorCoder::ColorPair::ColorPair(MajorColor major, MinorColor minor) :
-    majorColor(major), minorColor(minor)
-{}
-
-TelCoColorCoder::MajorColor TelCoColorCoder::ColorPair::getMajor() {
-    return majorColor;
-}
-
-TelCoColorCoder::MinorColor TelCoColorCoder::ColorPair::getMinor() {
-    return minorColor;
-}
-
 std::string TelCoColorCoder::ColorPair::ToString() {
     std::string colorPairStr = MajorColorNames[majorColor];
     colorPairStr += " ";
