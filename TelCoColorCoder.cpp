@@ -2,12 +2,12 @@
 #include <assert.h>
 #include "TelCoColorCoder.h"
 
-const char* TelCoColorCoder::MajorColorNames[] = {
+const char* TelCoColorCoder::MajorColorNames[5] = {
     "White", "Red", "Black", "Yellow", "Violet"
 };
 int TelCoColorCoder::numberOfMajorColors = 5;
 
-const char* TelCoColorCoder::MinorColorNames[] = {
+const char* TelCoColorCoder::MinorColorNames[5] = {
     "Blue", "Orange", "Green", "Brown", "Slate"
 };
 int TelCoColorCoder::numberOfMinorColors = 5;
