@@ -1,9 +1,10 @@
 #ifndef TELCOCOLORCODER_H
 #define TELCOCOLORCODER_H
 
-namespace TelCoColorCoder {
-    enum MajorColor { WHITE, RED, BLACK, YELLOW, VIOLET };
-    enum MinorColor { BLUE, ORANGE, GREEN, BROWN, SLATE };
+namespace TelCoColorCoder
+{
+    enum MajorColor {WHITE, RED, BLACK, YELLOW, VIOLET};
+    enum MinorColor {BLUE, ORANGE, GREEN, BROWN, SLATE};
 
     const char* MajorColorNames[] = {
         "White", "Red", "Black", "Yellow", "Violet"
@@ -21,21 +22,10 @@ namespace TelCoColorCoder {
             MajorColor majorColor;
             MinorColor minorColor;
         public:
-             ColorPair(MajorColor major, MinorColor minor):
-                majorColor(major), minorColor(minor)
-            {}
-            MajorColor getMajor() {
-                return majorColor;
-            }
-            MinorColor getMinor() {
-                return minorColor;
-            }
-            std::string ToString() {
-                std::string colorPairStr = MajorColorNames[majorColor];
-                colorPairStr += " ";
-                colorPairStr += MinorColorNames[minorColor];
-                return colorPairStr;
-            }
+            ColorPair(MajorColor major, MinorColor minor);
+            MajorColor getMajor();
+            MinorColor getMinor();
+            std::string ToString();
     };
 
     ColorPair GetColorFromPairNumber(int pairNumber);
